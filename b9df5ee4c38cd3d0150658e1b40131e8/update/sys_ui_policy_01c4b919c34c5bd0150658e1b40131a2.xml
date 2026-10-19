@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_2240531_equipm_0_equipeme">item_type=laptop^EQ<item display_value="Laptop" endquery="false" field="item_type" goto="false" newquery="false" operator="=" or="false" value="laptop"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>laptopmodel  is visible only when item type is laptop </short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-19 15:11:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>01c4b919c34c5bd0150658e1b40131a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>laptopmodel  is visible only when item type is laptop </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Equipment Request App" source="x_2240531_equipm_0">b9df5ee4c38cd3d0150658e1b40131e8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Equipment Request App">b9df5ee4c38cd3d0150658e1b40131e8</sys_scope>
+        <sys_update_name>sys_ui_policy_01c4b919c34c5bd0150658e1b40131a2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-19 15:11:15</sys_updated_on>
+        <table>x_2240531_equipm_0_equipeme</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="3b860cd1c3cc1bd0150658e1b4013197" label="Equipment Request" max_length="40" name="x_2240531_equipm_0_equipeme" type="collection">
+        <element choice="3" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="requested"/>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+            </choice>
+        </element>
+        <element label="Requested By" max_length="32" name="requested_by" reference="sys_user" reference_qual="active=true^department=221f3db5c6112284009f4becd3039cc9^ORdepartment=221f79b7c6112284005d646b76ab978c^ORdepartment=9a7ed3f03710200044e0bfc8bcbe5db7^EQ" reference_qual_condition="active=true^department=221f3db5c6112284009f4becd3039cc9^ORdepartment=221f79b7c6112284005d646b76ab978c^ORdepartment=9a7ed3f03710200044e0bfc8bcbe5db7^EQ" type="reference"/>
+        <element choice="3" label="Item Type" max_length="40" name="item_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Keyboard" sequence="4" value="keyboard"/>
+                <element inactive_on_update="false" label="Mouse" sequence="3" value="mouse"/>
+                <element inactive_on_update="false" label="Monitor" sequence="1" value="monitor"/>
+                <element inactive_on_update="false" label="UPS" sequence="5" value="ups"/>
+                <element inactive_on_update="false" label="Laptop" sequence="0" value="laptop"/>
+                <element inactive_on_update="false" label="Chair" sequence="2" value="chair"/>
+            </choice>
+        </element>
+        <element label="Justification" max_length="40" name="justification" type="journal_input"/>
+        <element choice="3" label="Laptop Model" max_length="40" name="laptop_model" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Dell" sequence="6" value="dell"/>
+                <element inactive_on_update="false" label="UPS" sequence="4" value="ups"/>
+                <element inactive_on_update="false" label="Lenovo" sequence="2" value="lenovo"/>
+                <element inactive_on_update="false" label="Fujitsu" sequence="11" value="fujitsu"/>
+                <element inactive_on_update="false" label="Huawei" sequence="9" value="huawei"/>
+                <element inactive_on_update="false" label="Acer" sequence="1" value="acer"/>
+                <element inactive_on_update="false" label="MSI" sequence="3" value="msi"/>
+                <element inactive_on_update="false" label="Microsoft" sequence="8" value="microsoft"/>
+                <element inactive_on_update="false" label="Asus" sequence="7" value="asus"/>
+                <element inactive_on_update="false" label="Samsung" sequence="5" value="samsung"/>
+                <element inactive_on_update="false" label="Toshiba" sequence="10" value="toshiba"/>
+                <element inactive_on_update="false" label="HP" sequence="0" value="hp"/>
+            </choice>
+        </element>
+        <element label="Quantity" max_length="40" name="quantity" type="integer"/>
+        <element choice="3" label="Mouse Model" max_length="255" name="mouse_model" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="HP" sequence="0" value="hp"/>
+                <element inactive_on_update="false" label="Toshiba" sequence="6" value="toshiba"/>
+                <element inactive_on_update="false" label="Lenovo" sequence="2" value="lenovo"/>
+                <element inactive_on_update="false" label="Asus" sequence="4" value="asus"/>
+                <element inactive_on_update="false" label="Huawei" sequence="5" value="huawei"/>
+                <element inactive_on_update="false" label="Dell" sequence="3" value="dell"/>
+                <element inactive_on_update="false" label="Acer" sequence="1" value="acer"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="3" label="Keyboard Model" max_length="40" name="keyboard_model" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Dell" sequence="1" value="dell"/>
+                <element inactive_on_update="false" label="Samsung" sequence="0" value="samsung"/>
+                <element inactive_on_update="false" label="Microsoft" sequence="3" value="microsoft"/>
+                <element inactive_on_update="false" label="Fujitsu" sequence="5" value="fujitsu"/>
+                <element inactive_on_update="false" label="Toshiba" sequence="4" value="toshiba"/>
+                <element inactive_on_update="false" label="Asus" sequence="2" value="asus"/>
+            </choice>
+        </element>
+        <element label="Manager" max_length="32" name="manager" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="manager"/>
+        </index>
+        <index name="index2">
+            <element name="requested_by"/>
+        </index>
+    </element>
+</database>

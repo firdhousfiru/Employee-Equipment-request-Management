@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>mouse_model</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-19 15:14:59</sys_created_on>
+        <sys_id>18c67dddc34c5bd0150658e1b4013129</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>mouse_model</sys_name>
+        <sys_package display_value="Equipment Request App" source="x_2240531_equipm_0">b9df5ee4c38cd3d0150658e1b40131e8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Equipment Request App">b9df5ee4c38cd3d0150658e1b40131e8</sys_scope>
+        <sys_update_name>sys_ui_policy_action_18c67dddc34c5bd0150658e1b4013129</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-19 15:14:59</sys_updated_on>
+        <table>x_2240531_equipm_0_equipeme</table>
+        <ui_policy display_value="mouse model is visible ehen item type is mouse">be66f5d9c34c5bd0150658e1b4013125</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=18c67dddc34c5bd0150658e1b4013129"/>
+</record_update>
