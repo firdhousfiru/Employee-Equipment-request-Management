@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Auto populate manager when clicking requested by</description>
+        <field>requested_by</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Auto populate manager</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading) {
+        return;
+    }
+    if (newValue === '') {
+        g_form.clearValue('manager');
+        return;
+    }
+    g_form.getReference('requested_by', function (user) {
+        g_form.setValue('manager', user.manager);
+    });
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-20 08:18:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8e90a121c3c01310150658e1b4013140</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auto populate manager</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Equipment Request App" source="x_2240531_equipm_0">b9df5ee4c38cd3d0150658e1b40131e8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Equipment Request App">b9df5ee4c38cd3d0150658e1b40131e8</sys_scope>
+        <sys_update_name>sys_script_client_8e90a121c3c01310150658e1b4013140</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-20 08:18:52</sys_updated_on>
+        <table>x_2240531_equipm_0_equipeme</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

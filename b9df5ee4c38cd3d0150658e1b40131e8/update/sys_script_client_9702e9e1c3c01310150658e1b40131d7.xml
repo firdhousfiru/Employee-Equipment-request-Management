@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Auto-fill justification</description>
+        <field>item_type</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Auto-fill justification</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    var defaults = {
+        laptop: 'Required a laptop to carry out my daily work and project tasks.',
+        monitor: 'Required an additional monitor to improve productivity and multitasking.',
+        chair: 'Required an ergonomic chair for comfortable seating during long working hours.',
+        mouse: 'Required a mouse as my current one is faulty or unavailable.',
+        ups: 'Required a UPS to protect my equipment from power outages and surges.',
+        keyboard: 'Required a keyboard as my current one is faulty or unavailable.'
+    };
+
+    var newText = defaults[String(newValue).toLowerCase()];
+    if (!newText) {
+        return;
+    }
+
+    // Only overwrite if the field is empty or still holds a default message
+    var current = g_form.getValue('justification');
+    var isDefault = false;
+    for (var key in defaults) {
+        if (defaults[key] === current) {
+            isDefault = true;
+            break;
+        }
+    }
+    if (!current || isDefault) {
+        g_form.setValue('justification', newText);
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-20 08:24:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9702e9e1c3c01310150658e1b40131d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auto-fill justification</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Equipment Request App" source="x_2240531_equipm_0">b9df5ee4c38cd3d0150658e1b40131e8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Equipment Request App">b9df5ee4c38cd3d0150658e1b40131e8</sys_scope>
+        <sys_update_name>sys_script_client_9702e9e1c3c01310150658e1b40131d7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-20 08:24:11</sys_updated_on>
+        <table>x_2240531_equipm_0_equipeme</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

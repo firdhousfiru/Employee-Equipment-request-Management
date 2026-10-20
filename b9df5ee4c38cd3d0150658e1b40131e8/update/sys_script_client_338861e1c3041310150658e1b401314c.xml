@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Number colour by status</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+    var map = {
+        approved:  { bg: 'green',     fg: 'white' },
+        rejected:  { bg: 'red',       fg: 'white' },
+        cancelled: { bg: 'lightblue', fg: 'black' }
+    };
+
+    var status = String(g_form.getValue('status')).toLowerCase();
+    var c = map[status];
+    if (!c) {
+        return;
+    }
+
+    var control = g_form.getControl('number');
+    if (control) {
+        control.style.backgroundColor = c.bg;
+        control.style.color = c.fg;
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-20 08:52:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>338861e1c3041310150658e1b401314c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Number colour by status</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Equipment Request App" source="x_2240531_equipm_0">b9df5ee4c38cd3d0150658e1b40131e8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Equipment Request App">b9df5ee4c38cd3d0150658e1b40131e8</sys_scope>
+        <sys_update_name>sys_script_client_338861e1c3041310150658e1b401314c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-20 08:52:09</sys_updated_on>
+        <table>x_2240531_equipm_0_equipeme</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
