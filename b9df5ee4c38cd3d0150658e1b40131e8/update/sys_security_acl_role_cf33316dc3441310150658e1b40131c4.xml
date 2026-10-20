@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-20 09:39:11</sys_created_on>
+        <sys_id>cf33316dc3441310150658e1b40131c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_2240531_equipm_0.requestor</sys_name>
+        <sys_package display_value="Equipment Request App" source="x_2240531_equipm_0">b9df5ee4c38cd3d0150658e1b40131e8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Equipment Request App">b9df5ee4c38cd3d0150658e1b40131e8</sys_scope>
+        <sys_security_acl display_value="x_2240531_equipm_0_equipeme.*">3033bd2dc3441310150658e1b4013160</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_cf33316dc3441310150658e1b40131c4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-20 09:39:11</sys_updated_on>
+        <sys_user_role display_value="x_2240531_equipm_0.requestor" name="x_2240531_equipm_0.requestor">4adf9ee4c38cd3d0150658e1b4013155</sys_user_role>
+    </sys_security_acl_role>
+</record_update>
